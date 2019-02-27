@@ -1,2 +1,2 @@
 # ProgramacaoII
-Exercicios e afins 
+Exercicios e afins hj eh meu niver 
