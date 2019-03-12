@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	
+	<title>Miau</title>
+	<meta charset="utf-8">
+	
+
+<style>
+	
+	body{
+
+	background-image: url("cat.png");
+}
+
+
+#area {
+
+	background-color: white;
+	position: relative;
+	left: 450px;
+	top: 30px;
+	width: 450px;
+	height: 270px;
+}
+
+#area #formulario{
+
+	background-color: white;
+	display: block;
+	left: 400px;
+}
+
+fieldset{
+
+	background-color: white;
+	width:400px;
+	height: 630px;
+	font-family: "Yu Gothic Light";
+
+}
+
+#formulario label.{
+
+	left: 40px;
+	margin-right: 100px;
+	margin-left: 100px;
+}
+
+#formulario legend{
+
+	font-style:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="area">
+
+	<h1>Cadastre um gatinho!</h1>
+
+	<p><b>O formulário abaixo tem o objetivo de cadastrar um gato em nossa empresa!</b></p>
+
+	 <form id="formulario">
+
+	 	<fieldset>
+		
+		<legend>Formulário</legend>
+
+		<br>
+
+		<label>Nome: </label>
+	
+			<input type="text" name="Nome completo" size="17" maxlength="100">
+			<br>
+			
+
+		<label>Idade: </label>
+	
+			<input type="text" name="Idade" size="27" maxlenght = "3">
+			<br>
+			<br>
+
+		<label> Sexo: </label>
+			<br>
+			<input type="radio" name="gender" value="Macho">Macho<br>
+			<input type="radio" name="gender" value="Fêmea">Fêmea<br>
+			<br>
+			
+		
+		<label>Apelido</label>
+			<input type="text" name="Apelido" size="13" maxlength="100">
+			<br>
+			<br>
+
+
+		<label> CPF do dono: </label>
+			<input type="text" name="CPF", size="27" maxlength="20">
+			<br>
+			<br>
+
+	
+
+		<label>Tipo sanguineo: </label>
+			<br>
+			<br>
+			<input type="radio" name="gender" value="A+">A+<br>
+			<input type="radio" name="gender" value="A-">A-<br>
+			<input type="radio" name="gender" value="AB+">AB+<br>
+			<input type="radio" name="gender" value="AB+">AB-<br>
+			<input type="radio" name="gender" value="AB+">B+<br>
+			<input type="radio" name="gender" value="AB+">B-<br>
+			<input type="radio" name="gender" value="AB+">O+<br>
+
+			<input type="radio" name="gender" value="AB+">O-<br>
+
+			<input type="submit" name="GRAVAR">
+
+			<br>
+	</fieldset>
+	</form>
+	</div>
+	
+
+
+</body>
+</html>
