@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Listando Pessoas</title>
+	<meta charset="utf-8">
+
+<style>
+	
+*{
+	margin: 0 auto;
+	font-family: "Yu Gothic Light";
+  background-color: #CFCFCF;}
+
+
+.div{
+  margin-left: 100px;
+  margin-right: 100px;
+  height: 250px;}
+
+.dos{
+  background-color: white;
+  position: relative;
+  top: 25%;
+  left: 2%;
+  height: 255%;
+  width: 55%;
+  }
+
+.br {
+ 	background-color: black;}
+
+.p {
+	line-height:185%;
+	position: relative;
+	top:7%;
+	margin-left: 5%;}
+
+</style>
+</head>
+	<body>
+		<div class="br">
+		<br>
+		<br>
+		</div>
+		<div class="div">
+		  <div class="dos">
+				<div class="p">
+                    <br>
+                   
+                    {% for i in usuarios: %}
+                        <p>Nome: <b>{{i.nome}}</b></p><br>
+                        <p>Endereço: <b>{{i.endereço}}</b></p><br>
+                        <p>Telefone: <b>{{i.telefone}}</b></p><br>
+                        <hr>
+                        {% endfor %}
+					
+					
+				
+				</div>
+		</div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+</div>
+</body>
+</html>
