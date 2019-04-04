@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Listar</title>
+</head>
+<body>
+
+<h1>Aqui é a Página de Listar Pessoas!</h1>
+
+<h2>Forma estática!</h2>
+<p>Ana  <a href="form_alterar_pessoa.html">Alterar</a></p>
+<p>Maria <a href="form_alterar_pessoa.html">Alterar</a></p>
+<p>Amanda <a href="form_alterar_pessoa.html">Alterar</a></p>
+<hr>
+<!-- Aqui serão listadas as pessoas que eu inseri no sistema.py, na lista pessoas-->
+
+<h2>Forma dinâmica!</h2>
+<hr>
+
+{%for i in lista:%}
+<p>Nome: {{i.nome}}</p><br>
+<p>Endereço:{{i.endereço}}</p><br>
+<p>Telefone:{{i.telefone}}</p>
+<a href="/excluir_pessoa">Excluir</a><br> <!--TESTE-->
+{%endfor%}
+
+<a href="/abrir_formulario">Incluir</a>
+
+<h2>Pessoas cadastradas pela ação inserir!</h2>
+
+
+{%for p in novo_usuario:%}
+{{p}}
+{%endfor%}
+
+</body>
+</html>

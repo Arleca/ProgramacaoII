@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Listar Comidas!</title>
+</head>
+<body>
+    <h1>LISTANDO COMIDAS SALGADAS OU DOCES</h1>
+
+<!--
+    {%for comida in lista_food:%}
+       Nome da Comida : {{comida.nome}} <a href="/excluir?nome={{comida.nome}}"><input type="submit" value="Excluir"></a>
+        Categoria: {{comida.categoria}}
+        Vencimento: {{comida.vencimento}}<br>
+    {%endfor%}
+-->
+<!--
+    {%for comida in lista_food:%}
+    Nome da Comida : {{comida.nome}}<form action="/excluir"><input type=hidden name=nome value="{{comida.nome}}"><input type=submit value=Excluir></form>
+    Categoria: {{comida.categoria}}
+    Vencimento: {{comida.vencimento}}<br>
+    {%endfor%}
+-->
+
+    {%for comida in lista_food:%}
+    Nome da Comida : {{comida.nome}} <a href="/excluir?nome={{comida.nome}}">Excluir</a>
+    Categoria: {{comida.categoria}}
+    Vencimento: {{comida.vencimento}}<br>
+    {%endfor%}
+
+<!--Para incluir uma comida, deve criar um link na pagina listar para redirecionar a um cadastro de comidas-->
+<a href="/abrir_form_incluir">Incluir</a>
+
+</body>
+</html>

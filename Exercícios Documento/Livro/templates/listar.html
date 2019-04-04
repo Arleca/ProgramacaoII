@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Listar Livros!</title>
+</head>
+<body>
+
+    <h1>Livros!</h1>
+    {%for i in listagem:%} 
+        {{i.titulo}}
+        {{i.autor}}
+        {{i.ano}}
+        {{i.editora}}<br>
+    {% endfor %}
+
+
+</body>
+</html>

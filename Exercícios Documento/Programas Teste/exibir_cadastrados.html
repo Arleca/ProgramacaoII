@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Listar</title>
+</head>
+<body>
+
+<h1>Usuários inseridos a partir da ação inserir</h1>
+
+
+
+{%for p in novo_usuario:%}
+<p>Nome: {{p.nome}}</p><br>
+<p>Endereço:{{p.endereço}}</p><br>
+<p>Telefone:{{i.telefone}}</p><br>
+{%endfor%}
+
+<a href="/abrir_formulario">Listar Pessoas</a>
+
+<h2>Pessoas cadastradas pela ação inserir!</h2>
+
+
+
+
+</body>
+</html>

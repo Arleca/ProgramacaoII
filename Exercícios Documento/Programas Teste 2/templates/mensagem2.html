@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Excluir Pessoa</title>
+</head>
+
+<body>
+    <h1>DADOS EXIBIDOS</h1>
+    {%for i in usuarios:%} 
+        {{i.nome + "; "}} <a href=/excluir_pessoa?nome={{i.nome}}><input type="submit" value="Excluir"></a>
+    {% endfor %}
+   
+
+</body>
+</html>
