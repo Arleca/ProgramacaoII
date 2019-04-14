@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request
+from flask import Flask, render_template,request, redirect, url_for
 
 app=Flask(__name__)
 
@@ -52,5 +52,26 @@ def excluir():
     return listar()
 
 
+@app.route("/form_editar_comida")
+def abrir_form_editar():
+    nome=request.args.get("nome")
+    for c in lista:
+        if c.nome==nome:
+            return render_template("form_editar_comida.html", food=c)
+    return "Comida não encontrada"
+
+
+@app.route("/editar")
+def editar():
+    procurar=request.args.get("nome_original")
+    nome=request.args.get("nome")
+    categoria=request.args.get("categoria")
+    vencimento=request.args.get("vencimento")
+    nova_comida=Comida(nome,categoria,vencimento)
+    for i in range(len(lista)):
+        if lista[i].nome ==procurar:
+            lista[i]=nova_comida
+            return redirect(url_for("listar"))
+    return "Comida não encontrada" + procurar
 
 app.run(debug=True)

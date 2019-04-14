@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Editar Comidas!</title>
+</head>
+<body>
+
+<form action="/editar">
+	Nome: <input type="text" name="nome" value="{{food.nome}}"">
+	Categoria: <input type="text" name="categoria" value="{{food.categoria}}"">
+	Vencimento:<input type="text" name="vencimento" value="{{food.vencimento}}""> <br>
+
+	<input type="submit" value="Alterar"><input value="{{food.nome}}" name="nome_original" type="hidden">
+
+</form>
+
+
+
+</body>
+</html>

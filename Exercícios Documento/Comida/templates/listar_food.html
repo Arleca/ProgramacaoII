@@ -23,9 +23,12 @@
 -->
 
     {%for comida in lista_food:%}
-    Nome da Comida : {{comida.nome}} <a href="/excluir?nome={{comida.nome}}">Excluir</a>
+    Nome da Comida : {{comida.nome}} 
     Categoria: {{comida.categoria}}
-    Vencimento: {{comida.vencimento}}<br>
+    Vencimento: {{comida.vencimento}}
+    <a href="/excluir?nome={{comida.nome}}">Excluir</a> 
+    <a href="/form_editar_comida?nome={{comida.nome}}">Editar</a>
+    <br>
     {%endfor%}
 
 <!--Para incluir uma comida, deve criar um link na pagina listar para redirecionar a um cadastro de comidas-->
