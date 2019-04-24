@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request, redirect, url_for
+from flask import Flask, render_template,request, redirect, url_for,session
 
 app=Flask(__name__)
 
@@ -11,6 +11,8 @@ class Comida():
 lista=[
     Comida("Pizza Doce","Doce","04/07"),
     Comida("Batata Frita","Salgado","12/10")]
+
+app.config["SECRET_KEY"]="nsei"
 
 @app.route("/")
 def index():
@@ -73,5 +75,26 @@ def editar():
             lista[i]=nova_comida
             return redirect(url_for("listar"))
     return "Comida não encontrada" + procurar
+
+@app.route("/form_login")
+def form_login():
+    return render_template("login.html")
+
+@app.route("/login")
+def login():
+    login = request.args.get("login")
+    senha = request.args.get("senha")
+    if login == "adm" and senha=="123":
+        session["usuario"] = login
+        return redirect("/")
+    else:
+        return "não deu!"
+
+
+@app.route("/logout")
+def logout():
+    session.pop("usuario")
+    return redirect("/")
+
 
 app.run(debug=True)
