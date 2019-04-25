@@ -80,10 +80,10 @@ def editar():
 def form_login():
     return render_template("login.html")
 
-@app.route("/login")
+@app.route("/login", methods=["POST"])
 def login():
-    login = request.args.get("login")
-    senha = request.args.get("senha")
+    login = request.form["login"]
+    senha = request.form["senha"]
     if login == "adm" and senha=="123":
         session["usuario"] = login
         return redirect("/")
