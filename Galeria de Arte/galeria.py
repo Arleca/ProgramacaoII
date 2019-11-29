@@ -1,13 +1,9 @@
 from peewee import * 
 import datetime
 # Galeria de Arte 
-arquivo="C:/Users/User/Downloads/bancodedados.db"
+arquivo="bancodedados.db"
 db=SqliteDatabase(arquivo)
-# Um autor pode estar em várias exposicoes
-# Uma exposicao pode ter varios autores 
-#Uma galeria pode ter varias exposicoes
-# #Uma exposicao pode estar em varias galerias 
-# Tem como o autor ter uma lista de obras? 
+
 class BaseModelo(Model): 
     class Meta: 
         database=db
